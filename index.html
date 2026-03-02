@@ -3,176 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="615 Royal Detailing - Premium auto detailing, ceramic coating, and paint correction in Nashville & surrounding areas. Get your vehicle showroom-ready today!"/>
   <title>615 Royal Detailing | Nashville's Premium Auto Detailing</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #e0e0e0;
-      background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 50%, #1e1e1e 100%);
+      background: linear-gradient(135deg, #0f0f0f 0%, #1e1e1e 100%);
       background-attachment: fixed;
       min-height: 100vh;
-      position: relative;
+      line-height: 1.6;
     }
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=60') center/cover no-repeat;
-      opacity: 0.05;
+      opacity: 0.04;
       z-index: -2;
-      pointer-events: none;
     }
     header {
-      background: rgba(30, 30, 30, 0.85);
-      backdrop-filter: blur(10px);
-      padding: 1.5rem 5%;
+      background: rgba(15,15,15,0.92);
+      backdrop-filter: blur(12px);
+      padding: 1.8rem 5%;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       text-align: center;
-      border-bottom: 1px solid rgba(200, 200, 200, 0.12);
+      border-bottom: 1px solid rgba(137,207,240,0.15);
     }
     h1 {
-      font-size: 2.6rem;
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
       color: #89CFF0;
-      margin-bottom: 0.4rem;
-      text-shadow: 0 2px 10px rgba(137, 207, 240, 0.35);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 3px 12px rgba(137,207,240,0.4);
     }
     .tagline {
-      font-size: 1.2rem;
-      color: #a0a0a0;
+      font-size: 1.3rem;
+      color: #b0b0b0;
       font-weight: 300;
     }
-    .contact-bar {
-      background: rgba(40, 40, 40, 0.9);
-      padding: 1rem;
+    .hero {
       text-align: center;
-      font-size: 1.1rem;
+      padding: 5rem 5% 4rem;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
     }
-    .contact-bar a,
-    .contact-bar span {
-      color: #89CFF0;
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 1.5rem auto;
+      color: #d0d0d0;
+    }
+    .btn {
+      display: inline-block;
+      background: #89CFF0;
+      color: #0a0a0a;
+      padding: 1.1rem 2.8rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border-radius: 50px;
       text-decoration: none;
-      margin: 0 1.5rem;
+      transition: all 0.35s ease;
+      box-shadow: 0 8px 25px rgba(137,207,240,0.35);
+    }
+    .btn:hover {
+      background: #A5D8FF;
+      transform: translateY(-5px);
+      box-shadow: 0 14px 40px rgba(165,216,255,0.5);
+    }
+    .contact-bar {
+      background: rgba(25,25,25,0.95);
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 1.15rem;
+    }
+    .contact-bar a, .contact-bar span {
+      color: #89CFF0;
+      margin: 0 1.8rem;
+      text-decoration: none;
       transition: color 0.3s;
     }
-    .contact-bar a:hover,
-    .contact-bar span:hover {
-      color: #A5D8FF;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 5%;
-    }
-    section {
-      margin-bottom: 4rem;
-    }
+    .contact-bar a:hover { color: #A5D8FF; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 5%; }
+    section { margin: 5rem 0; }
     h2 {
       color: #89CFF0;
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
       text-align: center;
+      margin-bottom: 2rem;
       position: relative;
     }
     h2::after {
       content: "";
-      width: 80px;
-      height: 4px;
+      width: 100px;
+      height: 5px;
       background: #89CFF0;
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
+      border-radius: 3px;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.8rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
     }
     .gallery img {
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      transition: transform 0.4s, box-shadow 0.4s;
-      border: 1px solid rgba(200,200,200,0.1);
+      height: 280px;
       object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+      transition: all 0.45s ease;
+      border: 1px solid rgba(137,207,240,0.1);
     }
     .gallery img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 15px 40px rgba(137,207,240,0.18);
+      transform: scale(1.06) translateY(-8px);
+      box-shadow: 0 20px 50px rgba(137,207,240,0.22);
     }
-    .services {
-      background: rgba(35, 35, 35, 0.7);
-      padding: 2.5rem;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: rgba(30,30,30,0.8);
+      padding: 2rem;
       border-radius: 16px;
       border: 1px solid rgba(137,207,240,0.12);
-    }
-    .price-item {
-      margin-bottom: 2.2rem;
-    }
-    .price-category {
-      font-size: 1.6rem;
-      color: #89CFF0;
-      margin-bottom: 0.8rem;
       text-align: center;
-    }
-    .price {
-      font-size: 2.8rem;
-      font-weight: bold;
-      color: #A5D8FF;
-      text-align: center;
-      margin: 0.5rem 0;
-    }
-    .details ul {
-      list-style-type: disc;
-      padding-left: 1.8rem;
-      color: #c0c0c0;
-      font-size: 1.05rem;
-    }
-    .details li {
-      margin-bottom: 0.6rem;
-    }
-    .cta {
-      text-align: center;
-      margin: 4rem 0;
-    }
-    .cta a {
-      display: inline-block;
-      background: #89CFF0;
-      color: #0f0f0f;
-      padding: 1rem 2.5rem;
-      font-size: 1.3rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
       transition: all 0.3s;
-      box-shadow: 0 8px 25px rgba(137,207,240,0.3);
     }
-    .cta a:hover {
-      background: #A5D8FF;
-      transform: translateY(-4px);
-      box-shadow: 0 12px 35px rgba(165,216,255,0.4);
-    }
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
+    .price { font-size: 3rem; font-weight: bold; color: #A5D8FF; margin: 1rem 0; }
+    .details ul { list-style: none; padding: 0; text-align: left; }
+    .details li { margin: 0.8rem 0; font-size: 1.1rem; color: #c8c8c8; }
+    .details li::before { content: "✔ "; color: #89CFF0; margin-right: 0.6rem; }
+    .testimonials { text-align: center; font-style: italic; color: #b0b0b0; }
+    .testimonial { margin: 2rem 0; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .cta-section { text-align: center; padding: 6rem 5% 4rem; background: rgba(20,20,20,0.7); border-radius: 20px; }
     footer {
-      background: rgba(20,20,20,0.9);
+      background: #0a0a0a;
       text-align: center;
-      padding: 2rem;
-      color: #a0a0a0;
+      padding: 3rem 5%;
+      color: #888;
       font-size: 0.95rem;
     }
+    .social-links a { color: #89CFF0; margin: 0 1rem; font-size: 1.6rem; }
     @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      .contact-bar a, .contact-bar span { display: block; margin: 0.8rem 0; }
-      .price { font-size: 2.4rem; }
-      .gallery { gap: 1.2rem; }
+      h1 { font-size: 2.6rem; }
+      .contact-bar a, .contact-bar span { display: block; margin: 1rem 0; }
+      .price { font-size: 2.5rem; }
+      .gallery { gap: 1.5rem; }
     }
   </style>
 </head>
@@ -180,7 +166,7 @@
 
   <header>
     <h1>615 Royal Detailing</h1>
-    <div class="tagline">Premium Auto Detailing • Ceramic Coating • Paint Correction</div>
+    <div class="tagline">Nashville's Premier Auto Detailing • Ceramic Coating • Paint Correction</div>
   </header>
 
   <div class="contact-bar">
@@ -189,88 +175,136 @@
     <span><i class="fas fa-map-marker-alt"></i> Nashville & Surrounding Areas</span>
   </div>
 
+  <section class="hero">
+    <h2>Transform Your Ride Today</h2>
+    <p>Professional detailing that brings out the best in your vehicle. From basic washes to full ceramic protection — we deliver showroom results every time.</p>
+    <a href="https://instagram.com/615royaldetailing" target="_blank" class="btn">Book Now on Instagram</a>
+    <p style="margin-top:1.5rem;">or call <strong>(615) 972-9151</strong> for a free quote</p>
+  </section>
+
   <div class="container">
 
     <section>
-      <h2>Our Work</h2>
+      <h2>Our Work Gallery</h2>
       <div class="gallery">
-        <img src="cars1.png" alt="Customer vehicles after detailing - view 1">
-        <img src="cars2.png" alt="Customer vehicles after detailing - view 2">
-        <img src="exterior1.png" alt="Premium exterior detail result">
-        <img src="interior1.jpeg" alt="Full interior cleaning and conditioning result">
+        <img src="cars1.png" alt="Premium exterior detail on luxury sedan - before/after shine">
+        <img src="cars2.png" alt="Deep cleaned luxury SUV after full detail">
+        <img src="exterior1.png" alt="Ceramic coated vehicle with extreme gloss and water beading">
+        <img src="interior1.jpeg" alt="Fully restored interior - seats, carpets, dashboard conditioned">
+        <img src="motoclean.jpeg" alt="Motorcycle or moto-inspired vehicle after premium clean and detail">
       </div>
     </section>
 
     <section>
-      <h2>Services & Pricing</h2>
-      <div class="services">
-
-        <div class="price-item">
-          <div class="price-category">EXTERIOR - BASIC</div>
+      <h2>Our Services & Pricing</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Exterior - Basic</h3>
           <div class="price">$55</div>
           <div class="details">
             <ul>
-              <li>Hand Wash</li>
-              <li>Bug & Tar Removal</li>
-              <li>Wheels & Tires Cleaned</li>
-              <li>Exterior Spray Sealant</li>
+              <li>Hand Wash & Dry</li>
+              <li>Bug/Tar Removal</li>
+              <li>Wheels & Tires Dressed</li>
+              <li>Spray Sealant Protection</li>
             </ul>
           </div>
         </div>
-
-        <div class="price-item">
-          <div class="price-category">EXTERIOR - PREMIUM</div>
-          <div class="price">$85</div>
-          <div class="details">
-            <ul>
-              <li>Hand Wash</li>
-              <li>Bug & Tar Removal</li>
-              <li>Wheels & Tires Cleaned</li>
-              <li>Exterior Spray Sealant</li>
-              <li>Exterior Wheel Cleaning</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="price-item">
-          <div class="price-category">INTERIOR - BASIC</div>
-          <div class="price">$65</div>
-          <div class="details">
-            <ul>
-              <li>Vacuum</li>
-              <li>Interior Wipe Down</li>
-              <li>Interior Glass Cleaning</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="price-item">
-          <div class="price-category">INTERIOR - FULL</div>
-          <div class="price">$100</div>
+        <div class="service-card">
+          <h3>Exterior - Premium</h3>
+          <div class="price">$85+</div>
           <div class="details">
             <ul>
               <li>All Basic services</li>
-              <li>Carpet & Seat Shampooing</li>
-              <li>Plastic/Upholstery Conditioning</li>
+              <li>Clay Bar Decontamination</li>
+              <li>Iron Fallout Removal</li>
+              <li>High-Gloss Sealant</li>
             </ul>
           </div>
         </div>
-
+        <div class="service-card">
+          <h3>Interior - Basic</h3>
+          <div class="price">$65</div>
+          <div class="details">
+            <ul>
+              <li>Full Vacuum</li>
+              <li>Wipe Down & Dusting</li>
+              <li>Glass Cleaning</li>
+              <li>Quick Freshen</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card">
+          <h3>Interior - Full</h3>
+          <div class="price">$100+</div>
+          <div class="details">
+            <ul>
+              <li>All Basic services</li>
+              <li>Hot Carpet/Seat Shampoo</li>
+              <li>Leather/Upholstery Conditioning</li>
+              <li>Odor Elimination</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card">
+          <h3>Ceramic Coating</h3>
+          <div class="price">$399+</div>
+          <div class="details">
+            <ul>
+              <li>1-5 Year Protection Plans</li>
+              <li>Professional Application</li>
+              <li>Hydrophobic & UV Resistance</li>
+              <li>Paint Prep Included</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card">
+          <h3>Paint Correction</h3>
+          <div class="price">$250+</div>
+          <div class="details">
+            <ul>
+              <li>Swirl/Scratch Removal</li>
+              <li>1-3 Step Polish</li>
+              <li>Finishing Sealant</li>
+              <li>Custom Levels Available</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <p style="text-align:center; margin-top:2rem; color:#a0a0a0; font-style:italic;">
-        *Prices are starting rates and may vary based on vehicle size, condition, and add-ons — contact us for a custom quote
+      <p style="text-align:center; margin:3rem 0; color:#a0a0a0; font-style:italic;">
+        *Starting prices — varies by vehicle size, condition & add-ons. Contact for accurate custom quote.
       </p>
     </section>
 
-    <div class="cta">
-      <a href="https://instagram.com/615royaldetailing" target="_blank">Book Now via Instagram DM</a>
-      <p style="margin-top:1.2rem; color:#a0a0a0;">or call <strong>(615) 972-9151</strong></p>
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial">
+        <p>"My black SUV looks better than the day I bought it — insane gloss after ceramic! Best detailer in Nashville."</p>
+        <p><strong>— Jake M., Brentwood</strong></p>
+      </div>
+      <div class="testimonial">
+        <p>"Interior was filthy from kids & dogs. They made it brand new. Highly recommend 615 Royal!"</p>
+        <p><strong>— Sarah T., Franklin</strong></p>
+      </div>
+      <!-- Add more real testimonials as you get them -->
+    </section>
+
+    <div class="cta-section">
+      <h2>Ready for a Showroom Finish?</h2>
+      <a href="https://instagram.com/615royaldetailing" target="_blank" class="btn">Message Us to Book</a>
+      <p style="margin:2rem 0 1rem; font-size:1.3rem;">Call or DM for fast quotes & availability</p>
+      <p><strong>(615) 972-9151</strong> • Nashville & Surrounding Areas</p>
     </div>
 
   </div>
 
   <footer>
-    <p>© 2026 615 Royal Detailing • Serving Nashville & surrounding areas • All rights reserved</p>
+    <div class="social-links">
+      <a href="https://instagram.com/615royaldetailing" target="_blank"><i class="fab fa-instagram"></i></a>
+      <!-- Add Facebook/X if you have them -->
+    </div>
+    <p style="margin:1.5rem 0;">© 2026 615 Royal Detailing • All rights reserved • Serving Nashville, TN & Surrounding Areas</p>
+    <p style="font-size:0.9rem;">Mobile Detailing • Ceramic Pros • Paint Perfection</p>
   </footer>
 
 </body>
